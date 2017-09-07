@@ -1,3 +1,5 @@
+# This file is to create a turtle race game
+
 from turtle import Turtle
 from random import randint
 

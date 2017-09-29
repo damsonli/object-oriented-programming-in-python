@@ -1,11 +1,9 @@
-from room import Room
-from character import Enemy, Friend
-from item import Item
+import rpg
 
 # creat rooms
-kitchen = Room("Kitchen")
-dining_hall = Room("Dining Hall")
-ballroom = Room("Ballroom")
+kitchen = rpg.Room("Kitchen")
+dining_hall = rpg.Room("Dining Hall")
+ballroom = rpg.Room("Ballroom")
 
 # assign and print the descrption
 kitchen.description = "A dank and dirty room buzzing with flies."
@@ -19,20 +17,20 @@ dining_hall.link_room(ballroom, "west")
 ballroom.link_room(dining_hall, "east")
 
 # create characters
-dave = Enemy("Dave", "A smelly zobmie")
+dave = rpg.Enemy("Dave", "A smelly zobmie")
 dave.conversation = "Brrlgrh... rhrhl... brains..."
 dave.weakness = "cheese"
 
-ava = Enemy("Ava", "A beautilful fox")
+ava = rpg.Enemy("Ava", "A beautilful fox")
 ava.conversation = "Hello..."
 ava.weakness = "sword"
 
-catrina = Friend("Catrina", "A friendly skeleton")
+catrina = rpg.Friend("Catrina", "A friendly skeleton")
 catrina.conversation = "Why hello there."
 
 # create item
-cheese = Item("cheese", "A big smelly block of cheese")
-sword = Item("sword", "A good-decarated sword")
+cheese = rpg.Item("cheese", "A big smelly block of cheese")
+sword = rpg.Item("sword", "A good-decarated sword")
 
 # start the game
 backpack = []
